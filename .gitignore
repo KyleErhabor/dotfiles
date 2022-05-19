@@ -13,7 +13,19 @@
 
 !.config/nvim/init.lua
 !.config/nvim/filetype.lua
+
 !.config/nvim/fnl
+.config/nvim/fnl/*
+
+!.config/nvim/fnl/dotfiles
+.config/nvim/fnl/dotfiles/*
+
+!.config/nvim/fnl/dotfiles/*.fnl
+
+!.config/nvim/fnl/dotfiles/plugin
+.config/nvim/fnl/dotfiles/plugin/*
+
+!.config/nvim/fnl/dotfiles/plugin/*.fnl
 
 !.config/nvim/lua
 .config/nvim/lua/*
