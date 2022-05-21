@@ -16,6 +16,7 @@
 
 (load {:wbthomason/packer.nvim {}
        :Olical/aniseed {:mod :aniseed}
+       :PaterJason/cmp-conjure {}
        :numToStr/Comment.nvim {:mod :comment}
        :Olical/conjure {:mod :conjure}
        :lewis6991/gitsigns.nvim {:mod :gitsigns}
@@ -31,12 +32,14 @@
        :hrsh7th/nvim-cmp {:requires [:neovim/nvim-lspconfig :hrsh7th/cmp-nvim-lsp :hrsh7th/cmp-buffer :hrsh7th/cmp-path
                                      :hrsh7th/cmp-cmdline
                                      ;; Luasnip
-                                     :L3MON4D3/LuaSnip :saadparwaiz1/cmp_luasnip]
+                                     :L3MON4D3/LuaSnip :saadparwaiz1/cmp_luasnip
+                                     ;; Custom
+                                     :PaterJason/cmp-conjure]
                           :mod :cmp}
        :Olical/nvim-local-fennel {:requires [:Olical/aniseed]}
        :neovim/nvim-lspconfig {:mod :lsp}
        :rcarriga/nvim-notify {:mod :notify} ; TODO: Rename to notify
-       :nvim-treesitter/nvim-treesitter {:run :TSUpdate
+       :nvim-treesitter/nvim-treesitter {:run ::TSUpdate
                                          :mod :treesitter}
        :romgrk/nvim-treesitter-context {:mod :treesitter-context}
        :nvim-treesitter/nvim-treesitter-textobjects {}
@@ -44,7 +47,7 @@
        :p00f/nvim-ts-rainbow {}
        :kyazdani42/nvim-web-devicons {:mod :web-devicons}
        :andweeb/presence.nvim {:mod :presence}
-       ;; :sunjon/shade.nvim {:mod :shade}
+       :sunjon/shade.nvim {:mod :shade}
        :lewis6991/spellsitter.nvim {:mod :spellsitter}
        :nvim-telescope/telescope.nvim {:requires [:nvim-lua/plenary.nvim]
                                        :mod :telescope}

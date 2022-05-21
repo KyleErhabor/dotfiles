@@ -5,8 +5,8 @@
 
 (let [rainbow_langs {:clojure true
                      :fennel true}]
-  (ts.setup {:ensure_installed [:lua :vim]
-             :highilight {:enable true}
+  (ts.setup {:ensure_installed [:comment :fennel :lua :vim]
+             :highlight {:enable true}
              :incremental_selection {:enable true}
              :indent {:enable true}
              :textobjects {:select {:enable true

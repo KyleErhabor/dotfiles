@@ -15,12 +15,10 @@
             ss (s:sub col col)]
         (a.nil? (ss:match "%s"))))))
 
-(let [win cmp.config.window.bordered]
-  (cmp.setup {;; :enabled (fn []
-              ;;            (let [mode (nvim.api.nvim_get_mode)]))
-              :snippet {:expand #(luasnip.lsp_expand $.body)}
-              :window {:completion (win)
-                       :documentation (win)}
+(let [window cmp.config.window.bordered]
+  (cmp.setup {:snippet {:expand #(luasnip.lsp_expand $.body)}
+              :window {:completion (window)
+                       :documentation (window)}
               :mapping (cmp.mapping.preset.insert {:<C-b> (cmp.mapping.scroll_docs -4)
                                                    :<C-f> (cmp.mapping.scroll_docs 4)
                                                    :<C-Space> (cmp.mapping.complete)
@@ -44,7 +42,7 @@
                           {:name :nvim_lsp_signature_help}]
                          [{:name :buffer}])})
   (cmp.setup.filetype :gitcommit {:sources (cmp.config.sources [{:name :cmp_git}
-                                                                 {:name :buffer}])})
+                                                                {:name :buffer}])})
   (cmp.setup.cmdline :/ {:mapping (cmp.mapping.preset.cmdline)
                          :sources [{:name :buffer}]})
   (cmp.setup.cmdline :: {:mapping (cmp.mapping.preset.cmdline)

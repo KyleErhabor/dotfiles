@@ -1,6 +1,6 @@
 (module dotfiles.plugin.kanagawa
   {autoload {: kanagawa}})
 
-(kanagawa.setup {:dimInactive true})
+(kanagawa.setup {})
 
 (vim.cmd "colorscheme kanagawa")

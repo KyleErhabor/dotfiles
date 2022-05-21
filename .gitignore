@@ -31,3 +31,8 @@
 .config/nvim/lua/*
 
 !.config/nvim/lua/plugins.lua
+
+!.config/clj-kondo
+.config/clj-kondo/*
+
+!.config/clj-kondo/config.edn
