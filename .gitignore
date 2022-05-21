@@ -1,8 +1,13 @@
+# .files gitignore
+#
+# TODO: Consider if ~/.config/configstore/update-notifier-npm.json should be added.
+
 # Ignore everything
 *
 
 # .files gitignore
 !.gitignore
+!.gitignore_global
 
 # Others
 !.config
