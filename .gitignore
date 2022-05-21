@@ -1,6 +1,4 @@
 # .files gitignore
-#
-# TODO: Consider if ~/.config/configstore/update-notifier-npm.json should be added.
 
 # Ignore everything
 *
@@ -10,6 +8,8 @@
 !.gitignore_global
 
 # Others
+!.bashrc
+
 !.config
 .config/*
 
@@ -41,3 +41,8 @@
 .config/clj-kondo/*
 
 !.config/clj-kondo/config.edn
+
+!.profile
+!.zshenv
+!.zprofile
+!.zshrc
