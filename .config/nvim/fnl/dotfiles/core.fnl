@@ -3,6 +3,12 @@
              nvim aniseed.nvim
              str aniseed.string}})
 
+(defn- exec [cmd]
+  (let [handle (io.popen cmd)
+        out (handle:read "*a")]
+    (handle:close)
+    out))
+
 ;; General
 (set nvim.o.number true)
 (set nvim.o.colorcolumn "120")
@@ -45,4 +51,4 @@
   (set nvim.o.termguicolors true))
 
 ;; Hosts and providers
-(set nvim.g.python3_host_prog nil)
+;; (set nvim.g.python3_host_prog (exec "pyenv which python3"))

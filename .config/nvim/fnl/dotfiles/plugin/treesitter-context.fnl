@@ -1,6 +1,4 @@
 (module dotfiles.plugin.treesitter-context
-  {autoload {ctx treesitter-context}})
+  {autoload {tsctx treesitter-context}})
 
-(ctx.setup)
-
-
+(tsctx.setup)

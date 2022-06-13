@@ -9,6 +9,21 @@
              :highlight {:enable true}
              :incremental_selection {:enable true}
              :indent {:enable true}
+
+             :refactor {:highlight_definitions {:enable true}
+                        :highlight_current_scope {:enable true}
+                        :smart_rename {:enable true}
+                        :navigation {:enable true
+                                     :keymaps {:goto_definition "gnd"
+                                               :list_definitions "gnD"
+                                               :list_definitions_toc "gO"
+                                               :goto_next_usage "<a-*>"
+                                               :goto_previous_usage "<a-#"}}}
+             :rainbow {:enable true
+                       ;; Just has to be a lisp.
+                       :disable (a.filter #(not (. rainbow_langs $1)) (tsp.available_parsers))
+                       :colors [:White :#FC4444 :#FC8404 :#FCD444 :#8CC43C :#5bc0de :#b776f5]
+                       }
              :textobjects {:select {:enable true
                                     :lookahead true
                                     :keymaps {"af" "@function.outer"
@@ -32,17 +47,4 @@
                                          :border :none
                                          :peek_definition_code {:<leader>df "@function.outer"
                                                                 :<leader>dF "@class.outer"}}}
-             :refactor {:highlight_definitions {:enable true}
-                        :highlight_current_scope {:enable true}
-                        :smart_rename {:enable true}
-                        :navigation {:enable true
-                                     :keymaps {:goto_definition "gnd"
-                                               :list_definitions "gnD"
-                                               :list_definitions_toc "gO"
-                                               :goto_next_usage "<a-*>"
-                                               :goto_previous_usage "<a-#"}}}
-             :rainbow {:enable true
-                       ;; Just has to be a lisp.
-                       :disable (a.filter #(not (. rainbow_langs $1)) (tsp.available_parsers))
-                       ;; Based on kanagawa theme.
-                       :colors [:#DCD7BA :#C34043 :#FF9E3B :#dcc161 :#76946A :#658594 :#938AA9]}}))
+             :tree-docs {:enable true}}))

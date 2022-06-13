@@ -7,7 +7,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # Add default node to path
-export PATH=~/.nvm/versions/node/v16.15.0/bin:$PATH
+# export PATH=~/.nvm/versions/node/v16.15.1/bin:$PATH
 
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"

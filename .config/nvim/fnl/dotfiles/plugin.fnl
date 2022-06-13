@@ -34,26 +34,30 @@
                                      ;; Luasnip
                                      :L3MON4D3/LuaSnip :saadparwaiz1/cmp_luasnip
                                      ;; Custom
-                                     :PaterJason/cmp-conjure]
+                                     :PaterJason/cmp-conjure :hrsh7th/cmp-nvim-lsp-signature-help]
                           :mod :cmp}
        :Olical/nvim-local-fennel {:requires [:Olical/aniseed]}
        :neovim/nvim-lspconfig {:mod :lsp}
        :rcarriga/nvim-notify {:mod :notify} ; TODO: Rename to notify
+       :nvim-treesitter/nvim-tree-docs {:mod :treesitter-docs}
        :nvim-treesitter/nvim-treesitter {:run ::TSUpdate
                                          :mod :treesitter}
-       :romgrk/nvim-treesitter-context {:mod :treesitter-context}
+       :nvim-treesitter/nvim-treesitter-context {:mod :treesitter-context}
        :nvim-treesitter/nvim-treesitter-textobjects {}
        :nvim-treesitter/nvim-treesitter-refactor {}
        :p00f/nvim-ts-rainbow {}
        :kyazdani42/nvim-web-devicons {:mod :web-devicons}
        :andweeb/presence.nvim {:mod :presence}
-       :sunjon/shade.nvim {:mod :shade}
+       ;; :sunjon/shade.nvim {:mod :shade}
        :lewis6991/spellsitter.nvim {:mod :spellsitter}
        :nvim-telescope/telescope.nvim {:requires [:nvim-lua/plenary.nvim]
                                        :mod :telescope}
        :nvim-telescope/telescope-fzf-native.nvim {:run :make}
-       :nvim-telescope/telescope-symbols.nvim {}
        :benfowler/telescope-luasnip.nvim {:module :telescope._extensions.luasnip}
+       :nvim-telescope/telescope-symbols.nvim {}
+       :nvim-telescope/telescope-ui-select.nvim {}
+       :akinsho/toggleterm.nvim {:tag :v1.*
+                                 :mod :toggleterm}
        ;; :arzg/vim-colors-xcode {:mod :vim-colors-xcode}
        :tpope/vim-dispatch {:cmd [:Dispatch :Make :Focus :Start]}
        :radenling/vim-dispatch-neovim {}

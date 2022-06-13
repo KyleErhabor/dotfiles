@@ -23,7 +23,8 @@
                                                    :<C-f> (cmp.mapping.scroll_docs 4)
                                                    :<C-Space> (cmp.mapping.complete)
                                                    :<C-e> (cmp.mapping.abort)
-                                                   :<CR> (cmp.mapping.confirm {:select true})
+                                                   :<CR> (cmp.mapping.confirm {:select true
+                                                                               :behavior cmp.ConfirmBehavior.Replace})
                                                    :<Tab> (cmp.mapping (fn [fallback]
                                                                          (if
                                                                            (cmp.visible) (cmp.select_next_item)

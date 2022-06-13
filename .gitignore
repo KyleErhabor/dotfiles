@@ -42,6 +42,11 @@
 
 !.config/clj-kondo/config.edn
 
+!.config/neofetch
+.config/neofetch/*
+
+!.config/neofetch/config.conf
+
 !.profile
 !.zshenv
 !.zprofile
