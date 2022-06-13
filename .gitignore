@@ -47,7 +47,13 @@
 
 !.config/neofetch/config.conf
 
+!dotfiles
+dotfiles/*
+
+!dotfiles/install.sh
+
 !.profile
+!README.md
 !.zshenv
 !.zprofile
 !.zshrc
